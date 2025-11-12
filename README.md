@@ -1,6 +1,7 @@
 # 4.Execution_of_NetworkCommands
-Name: Sudhindra.R
-Reg No: 212224240164
+## Name: Sudhindra.R
+
+## Reg No: 212224240164
 ## AIM :Use of Network commands in Real Time environment
 ## Software : Command Prompt And Network Protocol Analyzer
 ## Procedure: To do this EXPERIMENT- follows these steps:
