@@ -29,57 +29,47 @@ This commands includes
 • Other IP Commands e.g. show ip route etc.
 <BR>
 
-## Program
-## client
-```py
-import socket
-from pythonping import ping
-
-s = socket.socket()
-s.bind(('localhost', 8000))
-s.listen(5)
-print("Server listening on port 8000...")
-c, addr = s.accept()
-print(f"Connection from {addr}")
-
-while True:
-    try:
-        hostname = c.recv(1024).decode('utf-8')
-        if not hostname or hostname.lower() == 'exit':
-            print("Client disconnected.")
-            break
-        response = ping(hostname, verbose=False, count=4)
-        c.send(str(response).encode('utf-8'))
-    except Exception as e:
-        c.send(f"Ping failed: {e}".encode('utf-8'))
-
-c.close()
-```
-## server
-```py
-import socket
-
-s = socket.socket()
-s.connect(('localhost', 8000))
-
-while True:
-    ip = input("Enter the website you want to ping (or type 'exit' to quit): ")
-    s.send(ip.encode('utf-8'))
-    if ip.lower() == 'exit':
-        break
-    print(s.recv(4096).decode('utf-8'))
-
-s.close()
-```
-
 ## Output
-## client.py
 
-<img width="680" height="176" alt="image" src="https://github.com/user-attachments/assets/d9bd6779-9ca0-4a29-954f-a981c012efb0" />
+## Netstat
 
-## server.py
+<img width="906" height="524" alt="image" src="https://github.com/user-attachments/assets/23711b83-8b84-465b-919c-d1847f1409b2" />
 
-<img width="709" height="237" alt="image" src="https://github.com/user-attachments/assets/d5ae0b01-b7cb-4cd6-90c3-ef9fec0c865c" />
+## Ipconfig
+
+<img width="975" height="1005" alt="image" src="https://github.com/user-attachments/assets/06195f24-f741-4bd8-855c-2f3c268bce27" />
+
+## ping
+
+<img width="828" height="275" alt="image" src="https://github.com/user-attachments/assets/1a8ebd8b-0241-4b8f-ab6c-71545e540161" />
+
+## tracert
+
+<img width="1056" height="477" alt="image" src="https://github.com/user-attachments/assets/93039b0f-97f6-417e-830b-42f5321831ee" />
+
+## nslookup
+
+<img width="672" height="489" alt="image" src="https://github.com/user-attachments/assets/b3bc9a50-b75b-4e78-9fed-1bfad5f33e9e" />
+
+## getmac
+
+<img width="908" height="155" alt="image" src="https://github.com/user-attachments/assets/af9db0f3-2cba-400f-a94a-f1555db8e6e3" />
+
+## Hostname
+
+<img width="321" height="63" alt="image" src="https://github.com/user-attachments/assets/44369bb0-8b7a-41d3-823d-fa045f1ab430" />
+
+## nbtstat
+
+<img width="1029" height="545" alt="image" src="https://github.com/user-attachments/assets/371cf97f-0fb2-4dad-8344-a20bd6ccc0a9" />
+
+## arp
+
+<img width="1005" height="714" alt="image" src="https://github.com/user-attachments/assets/5ced43af-5b4c-46cd-af44-8b9ea5e4f960" />
+
+## systeminfo
+
+<img width="833" height="1049" alt="image" src="https://github.com/user-attachments/assets/e6398a0d-f287-41df-b4e0-2e6ccc6b622e" />
 
 
 ## Result
